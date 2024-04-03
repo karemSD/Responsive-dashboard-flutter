@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard_flutter/utils/app_spaces.dart';
 import 'package:responsive_dashboard_flutter/widgets/adptive_widget_layout.dart';
 
 import '../widgets/custom_drawer.dart';
@@ -9,9 +10,13 @@ class DashboardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //return Container();
+    SizeConfig().init(context);
     return Scaffold(
-      drawer: CustomDrawer(),
-      body: AdptiveLayoutWidget(mobileLayout: (context) => SizedBox() , tabletLayout: (context) => SizedBox(), desktopLayout: (context) => DesktopLayout() ,));
+        drawer: const CustomDrawer(),
+        body: AdptiveLayoutWidget(
+          mobileLayout: (context) => const SizedBox(),
+          tabletLayout: (context) => const SizedBox(),
+          desktopLayout: (context) => const DesktopLayout(),
+        ));
   }
 }
