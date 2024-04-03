@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard_flutter/widgets/custom_drawer.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Row(children: [Expanded(child: CustomDrawer())]);
   }
 }

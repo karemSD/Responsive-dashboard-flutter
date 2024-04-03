@@ -8,8 +8,8 @@ class AdptiveLayoutWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constrians) {
-      print("constrians width");
-      print(constrians.maxWidth);
+    //  print("constrians width");
+  //    print(constrians.maxWidth);
       if (constrians.maxWidth > 900) {
         return  Padding(
           padding: const EdgeInsets.all(10),

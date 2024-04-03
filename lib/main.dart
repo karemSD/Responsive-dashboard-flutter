@@ -7,14 +7,12 @@ void main() {
 
 class ResponsiveDashboardFlutter extends StatelessWidget {
   const ResponsiveDashboardFlutter({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
-   
-    throw const MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: DashboardView(),
     );
   }
 }
-
