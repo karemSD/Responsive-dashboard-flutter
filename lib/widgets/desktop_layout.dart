@@ -14,11 +14,14 @@ class DesktopLayout extends StatelessWidget {
           flex: 2,
           child: CustomDrawer(),
         ),
-        AppSpaces.horizontalSpace5,
+        AppSpaces.horizontalSpace(1.5),
         const Expanded(
-          flex: 4,
-          child: AllExpneses(),
-        ),
+            flex: 4,
+            child: Column(
+              children: [
+                AllExpneses(),
+              ],
+            )),
         const Expanded(
           flex: 3,
           child: SizedBox(),
