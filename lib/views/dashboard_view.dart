@@ -12,6 +12,7 @@ class DashboardView extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
+        backgroundColor: const Color(0xFFf7f9fa),
         drawer: const CustomDrawer(),
         body: AdptiveLayoutWidget(
           mobileLayout: (context) => const SizedBox(),
