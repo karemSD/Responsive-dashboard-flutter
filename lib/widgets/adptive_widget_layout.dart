@@ -1,27 +1,33 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:responsive_dashboard_flutter/utils/scroller.dart';
 
 class AdptiveLayoutWidget extends StatelessWidget {
   const AdptiveLayoutWidget({
-    super.key, required this.desktopLayout, required this.tabletLayout, required this.mobileLayout,
+    super.key,
+    required this.desktopLayout,
+    required this.tabletLayout,
+    required this.mobileLayout,
   });
   final WidgetBuilder desktopLayout, tabletLayout, mobileLayout;
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constrians) {
-    //  print("constrians width");
-  //    print(constrians.maxWidth);
+      //  print("constrians width");
+      //    print(constrians.maxWidth);
       if (constrians.maxWidth > 900) {
-        return  Padding(
+        return Padding(
           padding: const EdgeInsets.all(10),
-          child: desktopLayout(context),
+          child: ScrollConfiguration(
+              behavior: MyCustomScrollBehavior(),
+              child: desktopLayout(context)),
         );
       } else if (constrians.maxWidth > 400) {
-        return  Padding(
+        return Padding(
           padding: const EdgeInsets.all(10),
           child: tabletLayout(context),
         );
       } else {
-        return  Padding(
+        return Padding(
           padding: const EdgeInsets.all(10),
           child: mobileLayout(context),
         );
