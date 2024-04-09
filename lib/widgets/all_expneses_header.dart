@@ -14,7 +14,7 @@ class AllExpnesesHeader extends StatelessWidget {
           "All Expenses",
           style: AppStyles.styleSemiBold20,
         ),
-        Expanded(child: SizedBox()),
+        Spacer(),
         Padding(
           padding: EdgeInsets.only(right: 8.0),
           child: RangeOption(),
