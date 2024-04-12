@@ -1,15 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard_flutter/utils/app_spaces.dart';
 import 'package:responsive_dashboard_flutter/widgets/custom_background_continer.dart';
 import 'package:responsive_dashboard_flutter/widgets/my_card_section.dart';
+import 'package:responsive_dashboard_flutter/widgets/transaction_history_header.dart';
+
+import 'income_section.dart';
+import 'transaction_cards_list_view.dart';
 
 class PartThree extends StatelessWidget {
-  const PartThree({super.key});
-
+  const PartThree({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
-    return const CustomBackGroundContainer(
+    return CustomBackGroundContainer(
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        MyCardSection(),
+        const MyCardSection(),
+        const Divider(
+          height: 40,
+        ),
+        const TransactionHistoryHeader(),
+        AppSpaces.verticalSpace(1),
+       const Expanded(child:  TransactionCardListView()),
+       const IncomeSection()
       ]),
     );
   }
