@@ -3,9 +3,10 @@ import 'package:responsive_dashboard_flutter/utils/app_spaces.dart';
 import 'package:responsive_dashboard_flutter/widgets/all_expenses.dart';
 import 'package:responsive_dashboard_flutter/widgets/all_expenses_and_quick_invoice.dart';
 import 'package:responsive_dashboard_flutter/widgets/custom_drawer.dart';
+import 'package:responsive_dashboard_flutter/widgets/part_three.dart';
 import 'package:responsive_dashboard_flutter/widgets/quick_invoice.dart';
 
-import 'part_three.dart';
+import 'my_cards_and_transaction_history.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});

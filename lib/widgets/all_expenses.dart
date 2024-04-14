@@ -13,7 +13,9 @@ class AllExpneses extends StatelessWidget {
     return CustomBackGroundContainer(
       child: Column(
         children: [
-          const AllExpnesesHeader(),
+          const AllExpnesesHeader(
+            title: "All Expenses",
+          ),
           AppSpaces.verticalSpace(.9),
           const AllExpensesItemList()
         ],

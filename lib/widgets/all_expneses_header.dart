@@ -4,18 +4,18 @@ import 'package:responsive_dashboard_flutter/utils/app_styles.dart';
 import 'package:responsive_dashboard_flutter/widgets/range_option.dart';
 
 class AllExpnesesHeader extends StatelessWidget {
-  const AllExpnesesHeader({super.key});
-
+  const AllExpnesesHeader({super.key, required this.title});
+  final String title;
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return  Row(
       children: [
         Text(
-          "All Expenses",
+          title,
           style: AppStyles.styleSemiBold20,
         ),
-        Spacer(),
-        Padding(
+       const Spacer(),
+      const  Padding(
           padding: EdgeInsets.only(right: 8.0),
           child: RangeOption(),
         )
