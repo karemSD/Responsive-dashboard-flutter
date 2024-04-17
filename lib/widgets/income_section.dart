@@ -18,16 +18,17 @@ class IncomeSection extends StatelessWidget {
           AllExpnesesHeader(
             title: "Income",
           ),
-          Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Expanded(
-                  child: IncomeChart(),
-                ),
-                Expanded(child: IncomeDetails()),
-              ],
-            ),
+          //TODO when desktop make the row expaned
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Expanded(
+                child: IncomeChart(),
+              ),
+              
+              Expanded(child: IncomeDetails()),
+            ],
           )
         ],
       ),

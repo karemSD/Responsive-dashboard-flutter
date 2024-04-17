@@ -62,10 +62,10 @@ class TransactionCardListView extends StatelessWidget {
               key,
               style: AppStyles.styleRegular12,
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             ListView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: values.length,
               itemBuilder: (context, index) {
                 TransactoinCardModel value = values[index];
@@ -74,7 +74,7 @@ class TransactionCardListView extends StatelessWidget {
                 );
               },
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
           ],
         );
       },

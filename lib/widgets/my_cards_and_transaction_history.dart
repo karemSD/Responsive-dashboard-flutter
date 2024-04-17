@@ -20,7 +20,8 @@ class MyCardsAndTransactionHistory extends StatelessWidget {
         ),
         const TransactionHistoryHeader(),
         AppSpaces.verticalSpace(1),
-       const Expanded(child:  TransactionCardListView()),   
+        TransactionCardListView()
+        // const Expanded(child:  TransactionCardListView()),
       ]),
     );
   }
