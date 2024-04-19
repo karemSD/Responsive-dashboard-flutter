@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
 class SizeConfig {
+  //! Note about breakpoints : every design has own breakpoints so it is different form project to another based on the design
+  static double tabletBreakPoint = 660, desktopBreakPoint = 1110;
   static double? screenHeight;
   static double? screenWidth;
   static double? defualtSize;
   static Orientation? orientation;
 
   void init(BuildContext context) {
+    //! Note about screenHeight and screenWidth that is build one time on mobile or tablet but on web or windows this will now work until hot restert so make new varibles listen to media query when you work on web or windows
     screenHeight = MediaQuery.sizeOf(context).height;
     screenWidth = MediaQuery.sizeOf(context).width;
     orientation = MediaQuery.of(context).orientation;
@@ -17,7 +20,6 @@ class SizeConfig {
     print("Defualt Size is : $defualtSize");
   }
 }
-
 
 class AppSpaces {
   static SizedBox verticalSpace(double size) =>

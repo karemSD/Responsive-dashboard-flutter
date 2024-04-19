@@ -7,7 +7,6 @@ import '../utils/app_styles.dart';
 
 class TransactionCardListView extends StatelessWidget {
   const TransactionCardListView({super.key});
-
   static Map<String, List<TransactoinCardModel>> dictionary2 = {
     "13 April 2022": [
       TransactoinCardModel(
@@ -39,23 +38,41 @@ class TransactionCardListView extends StatelessWidget {
         amount: r"$20,129",
         date: "13 April 2022",
       ),
-      TransactoinCardModel(
-        title: "Cash Withdrawal",
-        amount: r"$20,129",
-        date: "13 April 2022",
-      ),
     ],
   };
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: dictionary2.length,
-      itemBuilder: (context, index) {
-        String key = dictionary2.keys.toList()[index];
-        List<TransactoinCardModel> values = dictionary2[key]!;
+    return Column(
+      children: dictionary2.entries.map((e) {
+        //  String key = dictionary2.keys.toList()[index];
+        // List<TransactoinCardModel> values = dictionary2[key]!;
         return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              e.key,
+              style: AppStyles.styleRegular12,
+            ),
+            const SizedBox(height: 8),
+            ...e.value
+                .map((transaction) => TransactionCard(
+                      user: transaction,
+                    ))
+                .toList(), // Correctly maps to Text widgets
+            const SizedBox(height: 16),
+          ],
+        );
+      }).toList(),
+    );
+  }
+}
+
+
+/**
+ * return 
+ * 
+ *    Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -77,7 +94,4 @@ class TransactionCardListView extends StatelessWidget {
             const SizedBox(height: 16),
           ],
         );
-      },
-    );
-  }
-}
+ */

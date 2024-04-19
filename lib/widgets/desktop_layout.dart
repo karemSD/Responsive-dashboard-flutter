@@ -20,9 +20,27 @@ class DesktopLayout extends StatelessWidget {
           child: CustomDrawer(),
         ),
         AppSpaces.horizontalSpace(1.5),
-        const Expanded(flex: 4, child: AllExpensesAndQuickInvoiceSection()),
-        AppSpaces.horizontalSpace(1.5),
-        const Expanded(flex: 3, child: PartThree()),
+        Expanded(
+          flex: 7,
+          child: CustomScrollView(
+            scrollDirection: Axis.vertical,
+            //   physics: AlwaysScrollableScrollPhysics(),
+            slivers: [
+              SliverFillRemaining(
+                //  fillOverscroll: true,
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    const Expanded(
+                      flex: 4, child: AllExpensesAndQuickInvoiceSection()),
+                    AppSpaces.horizontalSpace(1.5),
+                     const Expanded(flex: 3, child: PartThree()),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }

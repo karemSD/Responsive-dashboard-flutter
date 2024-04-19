@@ -3,38 +3,38 @@ import 'package:responsive_dashboard_flutter/Models/income_detail_model.dart';
 import 'income_details_item.dart';
 
 class IncomeDetails extends StatelessWidget {
-  const IncomeDetails({super.key});
+  const IncomeDetails({super.key, required this.items});
 
-  static List<IncomeDetailModel> items = [
-    IncomeDetailModel(
-      title: "Design Service",
-      value: "40",
-      color: const Color(0xFF2189c8),
-    ),
-    IncomeDetailModel(
-      title: "Design product",
-      value: "20",
-      color: const Color(0xFF2189c8),
-    ),
-    IncomeDetailModel(
-      title: "product royalti",
-      value: "25",
-      color: const Color(0xFF4db7f2),
-    ),
-    IncomeDetailModel(
-      title: "other",
-      value: "20",
-      color: const Color(0xFF218933),
-    ),
-  ];
+ final List<IncomeDetailModel> items;
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return Column(
+      children:
+          items.map((e) => IncomeDetailsItem(incomeDetailModel: e)).toList(),
+    );
+  }
+}
+ /**
+  * 
+  ListView.builder(
       shrinkWrap: true,
       itemCount: items.length,
       itemBuilder: (context, index) {
         return IncomeDetailsItem(incomeDetailModel: items[index]);
       },
+    );
+  */
+
+
+  class IncomeDetails2 extends StatelessWidget {
+  const IncomeDetails2({super.key, required this.items});
+
+ final List<IncomeDetailModel> items;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children:
+          items.map((e) => IncomeDetailsItem2(incomeDetailModel: e)).toList(),
     );
   }
 }

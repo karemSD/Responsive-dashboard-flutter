@@ -32,3 +32,30 @@ class IncomeDetailsItem extends StatelessWidget {
     );
   }
 }
+
+class IncomeDetailsItem2 extends StatelessWidget {
+  const IncomeDetailsItem2({
+    super.key,
+    required this.incomeDetailModel,
+  });
+
+  final IncomeDetailModel incomeDetailModel;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      contentPadding: EdgeInsets.zero,
+      leading: Container(
+        decoration: BoxDecoration(
+            color: incomeDetailModel.color, shape: BoxShape.circle),
+        width: 11,
+        height: 11,
+      ),
+      title: Text(
+        incomeDetailModel.title,
+        style: AppStyles.styleRegular16,
+      ),
+      
+    );
+  }
+}
