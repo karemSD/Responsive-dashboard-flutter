@@ -36,22 +36,22 @@ class IncomeDetailsBody extends StatelessWidget {
   static List<IncomeDetailModel> items = [
     IncomeDetailModel(
       title: "Design Service",
-      value: "40",
+      value: 40,
       color: const Color(0xFF2189c8),
     ),
     IncomeDetailModel(
       title: "Design product",
-      value: "20",
+      value: 20,
       color: const Color(0xFF2189c8),
     ),
     IncomeDetailModel(
       title: "product royalti",
-      value: "25",
+      value: 25,
       color: const Color(0xFF4db7f2),
     ),
     IncomeDetailModel(
       title: "other",
-      value: "20",
+      value: 20,
       color: const Color(0xFF218933),
     ),
   ];

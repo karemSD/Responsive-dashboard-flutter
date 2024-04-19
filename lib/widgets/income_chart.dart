@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../Models/income_detail_model.dart';
 import '../utils/app_spaces.dart';
+import '../utils/app_styles.dart';
 
 class IncomeChart extends StatefulWidget {
   const IncomeChart({super.key, required this.items});
@@ -39,35 +40,39 @@ class _IncomeChartState extends State<IncomeChart> {
         sectionsSpace: 0,
         sections: [
           PieChartSectionData(
+              titleStyle: AppStyles.styleMedium16.copyWith(color: Colors.white),
               title: width >= SizeConfig.desktopBreakPoint && width < 1198
-                  ? widget.items[0].value
+                  ? widget.items[0].value.toString()
                   : null,
               showTitle: width >= SizeConfig.desktopBreakPoint && width < 1198,
-              radius: activeIndex == 0 ? 40 : 30,
+              radius: activeIndex == 0 ? 45 : 35,
               value: 40,
               color: widget.items[0].color),
           PieChartSectionData(
+              titleStyle: AppStyles.styleMedium16.copyWith(color: Colors.white),
               title: width >= SizeConfig.desktopBreakPoint && width < 1198
-                  ? widget.items[1].value
+                  ? widget.items[1].value.toString()
                   : null,
               showTitle: width >= SizeConfig.desktopBreakPoint && width < 1198,
               value: 25,
-              radius: activeIndex == 1 ? 40 : 30,
+              radius: activeIndex == 1 ? 45 : 35,
               color: widget.items[1].color),
           PieChartSectionData(
+            titleStyle: AppStyles.styleMedium16.copyWith(color: Colors.white),
             title: width >= SizeConfig.desktopBreakPoint && width < 1198
-                ? widget.items[2].value
+                ? widget.items[2].value.toString()
                 : null,
             showTitle: width >= SizeConfig.desktopBreakPoint && width < 1198,
-            radius: activeIndex == 2 ? 40 : 30,
+            radius: activeIndex == 2 ? 45 : 35,
             value: 20,
             color: widget.items[2].color,
           ),
           PieChartSectionData(
+              titleStyle: AppStyles.styleMedium16.copyWith(color: Colors.white),
               title: width >= SizeConfig.desktopBreakPoint && width < 1198
-                  ? widget.items[3].value
+                  ? widget.items[3].value.toString()
                   : null,
-              radius: activeIndex == 3 ? 40 : 30,
+              radius: activeIndex == 3 ? 45 : 35,
               showTitle: width >= SizeConfig.desktopBreakPoint && width < 1198,
               value: 22,
               color: widget.items[3].color),
