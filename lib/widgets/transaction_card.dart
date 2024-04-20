@@ -17,15 +17,15 @@ class TransactionCard extends StatelessWidget {
         color: const Color(0XFFFAFAFA),
         child: ListTile(
           //contentPadding: EdgeInsets.symmetric(horizontal: 5),
-          title: Text(user.title, style: AppStyles.styleSemiBold16),
+          title: Text(user.title, style: AppStyles.styleSemiBold16(context)),
           trailing: Text(user.amount,
-              style: AppStyles.styleSemiBold20.copyWith(
+              style: AppStyles.styleSemiBold20(context).copyWith(
                 color: true ? Colors.red : Colors.green,
               )),
           //isThreeLine: true,
           subtitle: Text(
             user.date,
-            style: AppStyles.styleRegular14,
+            style: AppStyles.styleRegular14(context),
           ),
         ));
   }

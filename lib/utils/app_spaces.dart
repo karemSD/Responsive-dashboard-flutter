@@ -19,6 +19,28 @@ class SizeConfig {
 
     print("Defualt Size is : $defualtSize");
   }
+
+  getResponsiveText(BuildContext context, {required double fontSizeBase}) {
+    double scaleFactor = getScaleFactor(context);
+    double responsiveText = fontSizeBase * scaleFactor;
+    double lowerLimit = fontSizeBase * .8;
+    double upperLimit = fontSizeBase * 1.2;
+    print(
+        "base font  : $fontSizeBase  lowerLimit =$lowerLimit  upperLimit = $upperLimit  +  final  ${responsiveText.clamp(lowerLimit, upperLimit)} ");
+    return responsiveText.clamp(lowerLimit, upperLimit);
+  }
+
+  double getScaleFactor(BuildContext context) {
+    double width = MediaQuery.sizeOf(context).width;
+    print(width);
+    if (width < tabletBreakPoint) {
+      return width / 400;
+    } else if (width < desktopBreakPoint) {
+      return width / 700;
+    } else {
+      return width / 1280;
+    }
+  }
 }
 
 class AppSpaces {

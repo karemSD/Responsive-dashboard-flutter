@@ -17,10 +17,10 @@ class UserInfoListTile extends StatelessWidget {
       color: Color(0XFFFAFAFA),
       child: ListTile(
         leading: SvgPicture.asset(userInfoListTileModel.imagePath),
-        title:
-            Text(userInfoListTileModel.title, style: AppStyles.styleSemiBold16),
+        title: Text(userInfoListTileModel.title,
+            style: AppStyles.styleSemiBold16(context)),
         subtitle: Text(userInfoListTileModel.subTitle,
-            style: AppStyles.styleRegular12),
+            style: AppStyles.styleRegular12(context)),
       ),
     );
   }

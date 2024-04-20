@@ -40,7 +40,7 @@ class _IncomeChartState extends State<IncomeChart> {
         sectionsSpace: 0,
         sections: [
           PieChartSectionData(
-              titleStyle: AppStyles.styleMedium16.copyWith(color: Colors.white),
+              titleStyle: AppStyles.styleMedium16(context).copyWith(color: Colors.white),
               title: width >= SizeConfig.desktopBreakPoint && width < 1198
                   ? widget.items[0].value.toString()
                   : null,
@@ -49,7 +49,7 @@ class _IncomeChartState extends State<IncomeChart> {
               value: 40,
               color: widget.items[0].color),
           PieChartSectionData(
-              titleStyle: AppStyles.styleMedium16.copyWith(color: Colors.white),
+              titleStyle: AppStyles.styleMedium16(context).copyWith(color: Colors.white),
               title: width >= SizeConfig.desktopBreakPoint && width < 1198
                   ? widget.items[1].value.toString()
                   : null,
@@ -58,7 +58,7 @@ class _IncomeChartState extends State<IncomeChart> {
               radius: activeIndex == 1 ? 45 : 35,
               color: widget.items[1].color),
           PieChartSectionData(
-            titleStyle: AppStyles.styleMedium16.copyWith(color: Colors.white),
+            titleStyle: AppStyles.styleMedium16(context).copyWith(color: Colors.white),
             title: width >= SizeConfig.desktopBreakPoint && width < 1198
                 ? widget.items[2].value.toString()
                 : null,
@@ -68,7 +68,7 @@ class _IncomeChartState extends State<IncomeChart> {
             color: widget.items[2].color,
           ),
           PieChartSectionData(
-              titleStyle: AppStyles.styleMedium16.copyWith(color: Colors.white),
+              titleStyle: AppStyles.styleMedium16(context).copyWith(color: Colors.white),
               title: width >= SizeConfig.desktopBreakPoint && width < 1198
                   ? widget.items[3].value.toString()
                   : null,

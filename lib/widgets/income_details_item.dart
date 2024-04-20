@@ -23,11 +23,11 @@ class IncomeDetailsItem extends StatelessWidget {
       ),
       title: Text(
         incomeDetailModel.title,
-        style: AppStyles.styleRegular16,
+        style: AppStyles.styleRegular16(context),
       ),
       trailing: Text(
         "${incomeDetailModel.value.toStringAsFixed(0)}%",
-        style: AppStyles.styleMedium16,
+        style: AppStyles.styleMedium16(context),
       ),
     );
   }
@@ -53,7 +53,7 @@ class IncomeDetailsItem2 extends StatelessWidget {
       ),
       title: Text(
         incomeDetailModel.title,
-        style: AppStyles.styleRegular16,
+        style: AppStyles.styleRegular16(context),
       ),
     );
   }

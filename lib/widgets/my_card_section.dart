@@ -32,9 +32,9 @@ class _MyCardSectionState extends State<MyCardSection> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         AppSpaces.verticalSpace(.6),
-        const Text(
+         Text(
           "My Card",
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         AppSpaces.verticalSpace(.6),
         MyCardsPageView(

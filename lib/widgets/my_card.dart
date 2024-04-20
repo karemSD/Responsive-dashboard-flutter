@@ -34,7 +34,7 @@ class MyCard extends StatelessWidget {
                 left: 20,
                 child: Text(
                   'Name card',
-                  style: AppStyles.styleRegular12.copyWith(color: Colors.white),
+                  style: AppStyles.styleRegular12(context).copyWith(color: Colors.white),
                 ),
               ),
               Positioned(
@@ -42,7 +42,7 @@ class MyCard extends StatelessWidget {
                 left: 20,
                 child: Text(
                   'Syah Bandi',
-                  style: AppStyles.styleMedium16.copyWith(color: Colors.white),
+                  style: AppStyles.styleMedium16(context).copyWith(color: Colors.white),
                 ),
               ),
               Positioned(
@@ -55,7 +55,7 @@ class MyCard extends StatelessWidget {
                 right: 20,
                 child: Text(
                   '0918 8124 0042 8129',
-                  style: AppStyles.styleMedium20.copyWith(color: Colors.white),
+                  style: AppStyles.styleMedium20(context).copyWith(color: Colors.white),
                 ),
               ),
               Positioned(
@@ -63,7 +63,7 @@ class MyCard extends StatelessWidget {
                 right: 20,
                 child: Text(
                   '12/20 - 124',
-                  style: AppStyles.styleRegular12.copyWith(color: Colors.white),
+                  style: AppStyles.styleRegular12(context).copyWith(color: Colors.white),
                 ),
               ),
             ],

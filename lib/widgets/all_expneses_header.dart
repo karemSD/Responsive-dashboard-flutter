@@ -12,7 +12,7 @@ class AllExpnesesHeader extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
        const Spacer(),
       const  Padding(

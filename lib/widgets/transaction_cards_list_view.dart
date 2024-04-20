@@ -52,7 +52,7 @@ class TransactionCardListView extends StatelessWidget {
           children: [
             Text(
               e.key,
-              style: AppStyles.styleRegular12,
+              style: AppStyles.styleRegular12(context),
             ),
             const SizedBox(height: 8),
             ...e.value

@@ -31,17 +31,17 @@ class InActiveExpeneseItem extends StatelessWidget {
           AppSpaces.verticalSpace5,
           Text(
             allExpensesItemModel.title,
-            style: AppStyles.styleMedium16,
+            style: AppStyles.styleMedium16(context),
           ),
           AppSpaces.verticalSpace(.2),
           Text(
             allExpensesItemModel.date,
-            style: AppStyles.styleRegular14,
+            style: AppStyles.styleRegular14(context),
           ),
           AppSpaces.verticalSpace(.8),
           Text(
             allExpensesItemModel.price,
-            style: AppStyles.styleSemiBold24,
+            style: AppStyles.styleSemiBold24(context),
           ),
         ],
       ),
@@ -75,18 +75,18 @@ class ActiveExpeneseItem extends StatelessWidget {
           AppSpaces.verticalSpace5,
           Text(
             allExpensesItemModel.title,
-            style: AppStyles.styleMedium16.copyWith(color: Colors.white),
+            style: AppStyles.styleMedium16(context).copyWith(color: Colors.white),
           ),
           AppSpaces.verticalSpace(.2),
           Text(
             allExpensesItemModel.date,
             style: AppStyles.styleRegular14
-                .copyWith(color: const Color(0xFFFAFAFA)),
+                (context).copyWith(color: const Color(0xFFFAFAFA)),
           ),
           AppSpaces.verticalSpace(.8),
           Text(
             allExpensesItemModel.price,
-            style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+            style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
           ),
         ],
       ),
